@@ -1,0 +1,9 @@
+[submodule "deps/blasr_libcpp"]
+	path = deps/blasr_libcpp
+	url = https://github.com/PacificBiosciences/blasr_libcpp
+[submodule "deps/pbcopper"]
+	path = deps/pbcopper
+	url = https://github.com/PacificBiosciences/pbcopper.git
+[submodule "deps/pbbam"]
+	path = deps/pbbam
+	url = https://github.com/PacificBiosciences/pbbam.git
