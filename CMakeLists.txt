@@ -42,10 +42,11 @@ include_directories(${HDF5_INCLUDE_DIRS})
 #   INSTALL_DIR  _deps/htslib-ins
 # )
 
-FetchContent_MakeAvailable(blasr_libcpp)
-FetchContent_MakeAvailable(pbcopper)
-FetchContent_MakeAvailable(pbbam)
-FetchContent_MakeAvailable(htslib)
+FetchContent_MakeAvailable(htslib blasr_libcpp pbbam pbcopper)
+
+#add_subdirectory(${htslib_SOURCE_DIR} ${blasr_libcpp_SOURCE_DIR} ${pbbam_SOURCE_DIR} ${pbcopper_SOURCE_DIR})
+
+message(STATUS "htslib_SOURCE_DIR" ${htslib_SOURCE_DIR})
 
 message(STATUS "INCLUDE LOCATION" ${HDF5_INCLUDE_DIRS})
 message(STATUS "version" ${HDF5_VERSION})
@@ -53,5 +54,6 @@ message(STATUS "DEFINITIONS" ${HDF5_DEFINITIONS})
 message(STATUS "LIBRARIES" ${HDF5_LIBRARIES})
 message(STATUS "HL_LIBRARIES" ${HDF5_HL_LIBRARIES})
 
-add_executable(${PROJECT_NAME} src/main.cpp)
-target_link_libraries(${PROJECT_NAME} ${HDF5_HL_LIBRARIES} ${HDF5_CXX_LIBRARIES} ${HDF5_LIBRARIES} blasr_libcpp pbcopper pbbam htslib)
+include_directories(${pbbam_SOURCE_DIR})
+add_executable(${PROJECT_NAME} ../src/main.cpp ../src/OptionParser.cpp ../src/Settings.cpp _deps ${blasr_libcpp_SOURCE_DIR} ${pbbam_SOURCE_DIR} ${pbcopper_SOURCE_DIR})
+#target_link_libraries(${PROJECT_NAME} ${HDF5_HL_LIBRARIES} ${HDF5_CXX_LIBRARIES} ${HDF5_LIBRARIES} ${htslib_SOURCE_DIR} ${blasr_libcpp_SOURCE_DIR} ${pbbam_SOURCE_DIR} ${pbcopper_SOURCE_DIR})
