@@ -7,3 +7,6 @@
 [submodule "deps/pbbam"]
 	path = deps/pbbam
 	url = https://github.com/PacificBiosciences/pbbam.git
+[submodule "deps/hdf5"]
+	path = deps/hdf5
+	url = https://github.com/HDFGroup/hdf5.git
