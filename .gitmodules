@@ -1,12 +1,12 @@
 [submodule "deps/blasr_libcpp"]
 	path = deps/blasr_libcpp
-	url = https://github.com/PacificBiosciences/blasr_libcpp
+	url = https://github.com/ggraham/blasr_libcpp
 [submodule "deps/pbcopper"]
 	path = deps/pbcopper
-	url = https://github.com/PacificBiosciences/pbcopper.git
+	url = https://github.com/ggraham/pbcopper.git
 [submodule "deps/pbbam"]
 	path = deps/pbbam
-	url = https://github.com/PacificBiosciences/pbbam.git
+	url = https://github.com/ggraham/pbbam.git
 [submodule "deps/hdf5"]
 	path = deps/hdf5
 	url = https://github.com/HDFGroup/hdf5.git
