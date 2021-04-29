@@ -10,3 +10,6 @@
 [submodule "deps/hdf5"]
 	path = deps/hdf5
 	url = https://github.com/HDFGroup/hdf5.git
+[submodule "deps/meson"]
+	path = deps/meson
+	url = https://github.com/mesonbuild/meson.git
